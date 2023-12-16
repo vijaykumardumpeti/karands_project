@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+
+
+}
+
+
+Link {
+  color: rgb(3, 104, 104);
+  text-decoration: none;
+}
+
+Link:hover {
+  color: #47b2e4;
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: rgb(3, 104, 104);
+}
+
+
+
+/* Checked checkbox */
+
+input[type="checkbox"]:checked {
+
+  /* Custom checkbox styles */
+
+  background-color: rgb(3, 104, 104);
+  border: none;
+}
+
+input[type="radio"]:checked {
+    /* Custom checkbox styles */
+    background-color: rgb(3, 104, 104);
+    border: none;
+}
+
+input :focus {
+  outline: none;
+  }

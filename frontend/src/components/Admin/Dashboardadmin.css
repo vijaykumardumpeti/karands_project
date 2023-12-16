@@ -1,0 +1,24 @@
+
+.background
+{
+    width:50vw;
+    height: 80vh;
+    /* border:1px solid rgb(194, 188, 188); */
+    position: relative;
+    margin-left: 300px;
+}
+.users {
+    width: 15vw;
+    height: 20vh;
+    border: 1px solid black;
+    background-color: darkmagenta;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: blanchedalmond;
+    
+}
+
+

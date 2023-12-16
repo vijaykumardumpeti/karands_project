@@ -1,0 +1,20 @@
+const mongoose = require("mongoose");
+const documentSchema=new mongoose.Schema({
+    aadhar:String,
+    panCard:String,
+    passport:String,
+    license:String,
+    voterId:String,
+    otherPersonal:String,
+    convocation:String,
+    consolidatedMarksheet:String,
+    individualMarksheet:String,
+    otherEducation:String,
+    offerLetter:String,
+    appointmentLetter:String,
+    appraisalLetter:String,
+    salarySlips:String,
+    rewardsDocuments:String,
+    otherProfessional:String,
+    otherExtraDocuments:String,
+})

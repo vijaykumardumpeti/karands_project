@@ -1,0 +1,259 @@
+.animate-div {
+  width: 20%;
+  height: 8%;
+  /* background-color: #ffffff; */
+  /* position: fixed; */
+
+/* 
+position: absolute; */
+
+/* top:100px; */
+
+/* position: absolute; */
+
+
+/* 
+  bottom: 0px;
+  right: 3px; */
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  /* Add this line to enable expanding in height */
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: height 1s ease-in-out, position 0.3s ease-in-out;
+  z-index: 2px;
+}
+
+
+.animate-div-child {
+  background-color: #bceff9;
+  width: 25%;
+  height: 8%;
+  z-index: 3;
+  /* background-color: #ffffff; */
+  position: fixed;
+  bottom: 0px;
+  right: 300px;
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  /* Add this line to enable expanding in height */
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: height 0.3s ease-in-out;
+}
+
+/* Expanded style for the animation div */
+.animate-div.expanded {
+  height: 100%;
+  transition: height 1s ease-in-out, position 0.3s ease-in-out;
+  position: fixed;
+
+}
+
+.animate-div-child.expanded {
+  height: 75%;
+  width: 25%;
+}
+
+
+@keyframes slideUp {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 300px;
+    /* Set the height you want for the message log */
+  }
+}
+
+.messagelog {
+  top: 0;
+  color: black;
+  max-height: 300px;
+  /* background-color: #ffffff; */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  border-radius: 8px 8px 0px 0px;
+
+  /* overflow-y: hidden;  */
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+  overflow: "scroll"
+
+}
+
+.messagelog.open {
+  max-height: 300px;
+  /* Set the height you want for the message log */
+
+}
+
+.message-top:hover {
+  border-radius: 8px 8px 0px 0px;
+  background-color: #f5f5f5;
+}
+
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.message {
+  /* margin: 5px; */
+  /* padding: 10px; */
+  border-radius: 8px;
+}
+
+.my-message {
+  background-color: #c8c8c8;
+  /* Light green for my messages */
+  align-self: flex-end;
+  /* Align my messages to the right side */
+}
+
+.other-message {
+  /* background-color: #f0f0f0;  */
+  background-color: transparent;
+  border: none;
+}
+
+/* messages.css */
+.message {
+ 
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.message-left {
+  text-align: left;
+}
+
+.message-right {
+  text-align: right;
+}
+
+.name-left {
+  font-weight: bold;
+  color: blue;
+}
+
+.name-right {
+  font-weight: bold;
+  color: green;
+}
+
+.time {
+  color: #999;
+  font-size: 12px;
+}
+
+.content {
+  margin-top: 5px;
+}
+
+/* Additional styles for displaying the date in the desired format */
+.time {
+  display: block;
+  font-size: 12px;
+}
+
+/* Add this style to adjust the space between the sender name and the date */
+.name-left,
+.name-right {
+  margin-right: 10px;
+}
+
+/* messages.css */
+
+
+/* Individual message */
+.message {
+  
+  border-radius: 8px;
+  padding: 8px;
+  max-width: 400px;
+}
+
+/* Styling for "Me" messages */
+
+/* Sender name */
+.sender {
+  font-weight: bold;
+}
+
+/* Message content */
+.message-content {
+  margin-top: 4px;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.eachmessage:hover {
+  background-color: #dfdfdf;
+}
+
+
+
+
+.messagelog-delete:hover {
+
+  background-color: #525151;
+
+  border-radius: 50%;
+
+}
+
+.messageboxfull {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: white;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgb(3, 104, 104);
+  border-radius: 24px;
+  position: absolute;
+  right: 0px;
+}
+
+.messageHeader {
+  width: 100%;
+  display: flex;
+  height: 45px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 5px 10px;
+
+}
+
+.messagelogo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchalgorithm{
+padding: 0px 20px;
+}
+.form-control.searchinputbox::placeholder {
+padding-left: 30px;
+
+}

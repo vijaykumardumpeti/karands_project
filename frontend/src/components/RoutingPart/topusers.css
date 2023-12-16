@@ -1,0 +1,10 @@
+.personicon {
+    color: rgb(141, 141, 141);
+    transition: color 0.3s ease; /* Adding a transition for the color property */
+    cursor: pointer;
+}
+
+.personicon:hover {
+    color: rgb(62, 62, 62); /* Changing the color on hover */
+transform: scale(1.2);
+}

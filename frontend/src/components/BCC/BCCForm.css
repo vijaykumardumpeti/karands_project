@@ -1,0 +1,29 @@
+/* BCCForm.css */
+
+/* Transition for fading in and out */
+.section {
+    transition: opacity 0.1s ease-in-out;
+}
+
+/* Fade out animation */
+.section.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Disable pointer events during fade out */
+    display: none;
+}
+
+/* Fade in animation */
+.section.fade-in {
+    opacity: 1;
+    display: block;
+}
+.container {
+ 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered {
+    text-align: center;
+}

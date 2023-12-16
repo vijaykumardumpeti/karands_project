@@ -1,0 +1,170 @@
+/* Target the dropdown menu for both Select components */
+.react-select {
+    z-index: 9999;
+   
+  }
+  /* modal.css */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  color: #000;
+}
+
+.close-button:hover {
+  color: #f00;
+}
+
+.custom-hover:hover {
+  transform: scale(1.2);
+}
+
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.stepper-step {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stepper-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.stepper-step.active {
+  background-color: #3498DB;
+  color: white;
+}
+
+
+.non-clickable {
+  pointer-events: none;
+  background-color: grey;
+}
+
+.search-bar-container.focused .form-control {
+  width: 400px;
+  border-radius: 25px;
+  border: none;
+
+
+}
+
+.search-bar-container.focused .form-control.expanding {
+  width: 400px;
+  border-radius: 25px;
+  border: none;
+}
+.search-bar-container {
+  position: relative;
+}
+a {
+  color: rgb(3, 104, 104);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #47b2e4;
+  text-decoration: none;
+  cursor: "pointer"
+}
+
+.left-message {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.right-message {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.left-message-avatar {
+  margin-right: 10px;
+}
+
+.right-message-avatar {
+  margin-left: 10px;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-sender {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.message-text {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.message-date {
+  font-size: 12px;
+  color: gray;
+}
+.status-button {
+  position: relative;
+  display: inline-block;
+}
+
+.status-button-toggle {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.status-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.status-dropdown button {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.status-dropdown button:hover {
+  background-color: #ddd;
+}

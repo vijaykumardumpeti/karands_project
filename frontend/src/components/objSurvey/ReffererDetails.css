@@ -1,0 +1,32 @@
+.container {
+  width: 32vw;
+  height: 35vh;
+  margin-top: 40px;
+}
+.form{
+    
+border: 1px solid black;
+border-radius: 15px;
+padding: 10px;
+
+}
+
+h3 {
+  color: blue;
+}
+.form {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  justify-content: space-between;
+}
+dt {
+  display: flex;
+  align-items: flex-start;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

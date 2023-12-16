@@ -1,0 +1,39 @@
+.cardContainer{
+    height: 150px;
+
+}
+.bankcard {
+    margin-top: 20px;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.front{
+    color: white;
+    margin-top: 10px;
+}
+.card-holder{
+    font-style: italic;
+    color: white;
+    display: flex;
+
+}
+.card-no{
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+}
+.visa_crinfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #ffffff;
+  }
+  .check-bank{
+    color: white;
+    padding: 10px ;
+    display: flex;
+    justify-content: flex-start;
+
+  }

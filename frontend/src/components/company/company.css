@@ -1,0 +1,36 @@
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the modal opening */
+  .custom-modal-enter {
+    animation: slideInFromTop 0.3s ease-in-out forwards;
+  }
+  
+  /* Define the animation for modal closing */
+  @keyframes slideOutToTop {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Apply the animation to the modal closing */
+  .custom-modal-exit {
+    animation: slideOutToTop 0.3s ease-in-out forwards;
+  }
+
+  /* .fixedamtcard {
+
+  } */

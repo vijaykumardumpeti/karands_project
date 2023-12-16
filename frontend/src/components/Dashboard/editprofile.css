@@ -1,0 +1,116 @@
+#accountinfo,#personnal,#educational,#jobexperience,#project{
+	background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition:  0.3s ease;
+    width: 700px;
+}
+.postcardview{
+    background-color: white;
+    box-sizing:"border-box";
+    margin: 20px;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(119, 135, 150);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 6px 8px rgba(0,0,0,0.11), 0 8px 16px rgba(0,0,0,0.11);
+}
+.popupListEach{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+}
+.eachLIstPopup{
+    width: 50%;
+}
+.postcardheader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+.bi-three-dots-vertical{
+    font-size: 20px;
+}
+
+.postcardheaderleft{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+.userdetailspostcard{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 12px;
+    color: rgb(78, 189, 232);
+    font-size: x-small;
+    color: rgb(241, 238, 238);
+}
+
+
+/* ................profile pic............... */
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.default-pic {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+ 
+  cursor: pointer;
+}
+
+#profile-pic-upload {
+  display: none;
+}
+
+.edit{
+  text-align: start;
+  color: whitesmoke;
+  margin-left: 10px;
+  text-shadow: 2px 2px rgb(126, 126, 126);
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(3, 104, 104); /* Button background color */
+  color: #fff; /* Button text color */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.user-from-element{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid red;
+}

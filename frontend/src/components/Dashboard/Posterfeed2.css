@@ -1,0 +1,183 @@
+/* PostFeed.css */
+
+.post-feed-container {
+  /* max-width: 600px; */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-feed-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-feed-content {
+  margin-bottom: 20px;
+}
+
+.post-feed-inputs input,
+.post-feed-inputs textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.postbox {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-left: 50%;
+  margin-top: 20%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 25px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+
+.post-feed-icons .icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: #999999;
+}
+
+.post-feed-buttons {
+  text-align: right;
+}
+
+.post-feed-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+
+.post-options-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.post-options-modal h2 {
+  margin-bottom: 10px;
+}
+
+.post-options-modal button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.post-options-modal button:last-child {
+  margin-right: 0;
+}
+
+/* 
+.Toastify__toast-body {
+  font-size: 10px; 
+} */
+
+
+
+/* css for serach bar */
+
+.search-bar-container {
+  position: relative;
+
+
+}
+
+.suggestions-container {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  width: 100%;
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+
+  z-index: 1;
+
+  width: 400px;
+
+  max-height: 400px;
+}
+
+.Suggestions {
+  padding: 10px;
+  cursor: pointer;
+
+
+
+}
+
+.Suggestions:hover {
+  background-color: #f5f5f5;
+
+}
+
+.form-control {
+  transition: width 4s ease;
+
+
+}
+
+
+
+
+.search-bar-container.focused .form-control {
+  width: 400px;
+  border-radius: 25px;
+  border: none;
+
+
+}
+
+.search-bar-container.focused .form-control.expanding {
+  width: 400px;
+  border-radius: 25px;
+  border: none;
+}
+
+#Searchbar-Input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 25px;
+  outline: none;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding: 5px 10px;
+}

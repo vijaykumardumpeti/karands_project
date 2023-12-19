@@ -26,7 +26,7 @@ function add(){
   })
 }
     const navigate = useNavigate()
-    function btnClick(){
+function btnClick(){
       axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/refferalCode/${refferalCode}`)
       .then(res=>{
         console.log(res.data);

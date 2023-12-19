@@ -90,10 +90,14 @@ function Viewprofile(props) {
 
         .catch(err => console.log(err));
 
+        //check this url in backend vijay here 
+
       axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${params.userId}`)
+      // http://localhost:3000/karands/users/1
 
         .then(res => {
           const roles = res.data.details;
+          console.log(roles);
 
           if (!roles.fullName) {
             navigate("/dashboard")

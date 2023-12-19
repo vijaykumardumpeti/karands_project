@@ -17,6 +17,7 @@ import MyContext from '../../mycontext';
 
 import Messagebox from '../../components/messaging/MessageBox';
 
+
 export default function MyNetwork() {
   const { handleclickdiv, profilepicfunction } = useContext(MyContext)
 
@@ -429,6 +430,7 @@ export default function MyNetwork() {
             </div>
           </div>
         </div>
+        
         <Messagebox handleclickdiv={handleclickdiv} />
       </div>
   );

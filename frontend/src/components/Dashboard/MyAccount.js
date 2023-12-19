@@ -28,6 +28,7 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 import MyContext from '../../mycontext';
 
 import Messagebox from '../../components/messaging/MessageBox';
+import PopupWithCards from '../../components/Dashboard/popupWithCards' 
 
 function MyAccount() {
 
@@ -60,7 +61,6 @@ function MyAccount() {
   function checkStatus() {
 
 
-    
 
 
     if (objectSurvey && profile && document) navigate("/PhonePayIntegration");
@@ -84,13 +84,10 @@ function MyAccount() {
       .catch((err) => console.log(err));
 
     axios
-      .get(
-        `${
-          process.env.REACT_APP_IP_ADDRESS
-        }/karands/users/${localStorage.getItem("id")}`
-      )
+      .get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${localStorage.getItem("id")}`)
       .then((res) => {
         let entireDetails = res.data.details;
+        console.log(entireDetails)
 
         setDetails(entireDetails);
         if (entireDetails.fullName) {
@@ -455,12 +452,13 @@ function MyAccount() {
                               ? details.RefferalCount.length
                               : 0}
                           </h6>
-                          <Link
+                          {/* <Link
                             style={{ marginBottom: "10px", marginLeft: "10px" }}
                             to="/view"
                           >
                             View
-                          </Link>
+                          </Link> */}
+                          <PopupWithCards />
                           {/* <a href="/ICHP/myaccount" className="h6 stretched-link btn-link d-flex justify-content-start ms-2" style={{ textDecoration: 'none' }} > View</a> */}
                         </div>
                         <div className="col-lg-12 d-flex  flex-lg-row align-items-center mt-3 ">

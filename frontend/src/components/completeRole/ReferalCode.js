@@ -44,7 +44,9 @@ export default function ReferalCode() {
         axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/email/${localStorage.getItem('email')}`)
           .then(res => {
             const roles = res.data
+            
             console.log(roles);
+
             navigate("/dashboard")
           })
 

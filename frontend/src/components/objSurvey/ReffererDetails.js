@@ -7,10 +7,10 @@ import { useLocation } from "react-router-dom";
 
 export default function ReffererDetails() {
   const location=useLocation()
-  const [state,setState]=useState(location.state)
+  const [state, setState]=useState(location.state)
   return (
     <div>
-   
+
       <ReferalCode />
       <div className="container mt-4">
         <div className=" mt-5">

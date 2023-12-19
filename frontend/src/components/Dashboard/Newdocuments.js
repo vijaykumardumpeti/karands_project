@@ -28,7 +28,7 @@ function Newdocuments() {
 
   const [isLoading, setisLoading] = useState(true);
 
- 
+
 
   
 
@@ -115,6 +115,7 @@ function Newdocuments() {
         if (!isFileTypeAllowed(selectedFile)) {
           alert("Only PDF and JPEG files are allowed.");
           event.target.value = ""; // Reset the input
+
           return;
         }
 
@@ -1326,7 +1327,7 @@ function Newdocuments() {
                                                         accept=".jpeg, .pdf,"
                                                         className="form-control"
                                                         id="Convocation"
-                                                        onChange={handleeducationaldetails(
+                                                        onChange={handleFileChangeAndSubmit(
                                                           "educationalDetails",
                                                           educations.college
                                                         )}
@@ -1365,7 +1366,7 @@ function Newdocuments() {
                                                         accept=".png, .jpg, .jpeg, .pdf,  .doc"
                                                         className="form-control"
                                                         id="ConsolidatedMarksheets"
-                                                        onChange={handleeducationaldetails(
+                                                        onChange={handleFileChangeAndSubmit(
                                                           "educationalDetails",
                                                           educations.college
                                                         )}
@@ -1404,7 +1405,7 @@ function Newdocuments() {
                                                         accept=".png, .jpg, .jpeg, .pdf,  .doc"
                                                         className="form-control"
                                                         id="IndividualMarksheet"
-                                                        onChange={handleeducationaldetails(
+                                                        onChange={handleFileChangeAndSubmit(
                                                           "educationalDetails",
                                                           educations.college
                                                         )}
@@ -1440,7 +1441,7 @@ function Newdocuments() {
                                                       <input
                                                         type="file"
                                                         accept=".png, .jpg, .jpeg, .pdf,  .doc"
-                                                        onChange={handleeducationaldetails(
+                                                        onChange={handleFileChangeAndSubmit(
                                                           "educationalDetails",
                                                           educations.college
                                                         )}
@@ -1760,7 +1761,7 @@ function Newdocuments() {
                                                       accept=".png, .jpg, .jpeg, .pdf,  .doc"
                                                       className="form-control"
                                                       id="OfferLetter"
-                                                      onChange={handleproffetional(
+                                                      onChange={handleFileChangeAndSubmit(
                                                         "professionalDetails",
                                                         exp.companyName,
                                                         exp.experienceStart
@@ -1799,7 +1800,7 @@ function Newdocuments() {
                                                       type="file"
                                                       accept=".png, .jpg, .jpeg, .pdf,  .doc"
                                                       className="form-control"
-                                                      onChange={handleproffetional(
+                                                      onChange={handleFileChangeAndSubmit(
                                                         "professionalDetails",
                                                         exp.companyName,
                                                         exp.experienceStart
@@ -1840,7 +1841,7 @@ function Newdocuments() {
                                                       accept=".png, .jpg, .jpeg, .pdf,  .doc"
                                                       className="form-control"
                                                       id="AppraisalLetter"
-                                                      onChange={handleproffetional(
+                                                      onChange={handleFileChangeAndSubmit(
                                                         "professionalDetails",
                                                         exp.companyName,
                                                         exp.experienceStart
@@ -1880,7 +1881,7 @@ function Newdocuments() {
                                                       accept=".png, .jpg, .jpeg, .pdf,  .doc"
                                                       className="form-control"
                                                       id="SalarySlips"
-                                                      onChange={handleproffetional(
+                                                      onChange={handleFileChangeAndSubmit(
                                                         "professionalDetails",
                                                         exp.companyName,
                                                         exp.experienceStart
@@ -1916,7 +1917,7 @@ function Newdocuments() {
                                                 <div className="col-lg-6">
                                                   <div className="input-group mt-2">
                                                     <input
-                                                      onChange={handleproffetional(
+                                                      onChange={handleFileChangeAndSubmit(
                                                         "professionalDetails",
                                                         exp.companyName,
                                                         exp.experienceStart
@@ -1958,7 +1959,7 @@ function Newdocuments() {
                                                     <input
                                                       type="file"
                                                       accept=".png, .jpg, .jpeg, .pdf,  .doc"
-                                                      onChange={handleproffetional(
+                                                      onChange={handleFileChangeAndSubmit(
                                                         "professionalDetails",
                                                         exp.companyName,
                                                         exp.experienceStart

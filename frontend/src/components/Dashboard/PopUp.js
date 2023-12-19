@@ -269,9 +269,13 @@ function PopUp() {
 
     setLoading(true);
 
+    let id = localStorage.getItem('id')
+    // console.log(id)
+
     axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${localStorage.getItem('id')}`)
       .then(res => {
         let entireDetails = res.data.details;
+        console.log(entireDetails);
 
         console.log("entireDetails...........", entireDetails)
 

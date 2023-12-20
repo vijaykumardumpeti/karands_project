@@ -83,7 +83,7 @@ function App() {
 
   const imagefileref = useRef("")
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e) => { 
     // Get the updated input value
     // Update the state with the new value
     inputMessageRef.current = e.target.value;

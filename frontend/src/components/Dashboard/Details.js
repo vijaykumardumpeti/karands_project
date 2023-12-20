@@ -147,7 +147,7 @@ function Details() {
 
   const [isExpanding, setIsExpanding] = useState(false); // New state for expanding animation
   // Simulate fetching suggestions based on input value
-
+//=================================================================================================================================================
   const fetchSuggestions = async () => {
     if (inputValue.length > 1) {
       // Simulate fetching suggestions from the backend (replace with actual API call)
@@ -163,11 +163,11 @@ function Details() {
       setShowSuggestions(false);
     }
   };
-
+//=======================================================================================================================================================
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
-
+//=====================================================================================================================================
   const handleSuggestionClick = (suggestion) => {
     console.log("clicked form handleSuggestionClick");
 
@@ -185,7 +185,7 @@ function Details() {
 
     // setShowSuggestions(false);
   };
-
+//===========================================================================================================================================
   const handleInputFocus = () => {
     setIsFocused(true);
   };

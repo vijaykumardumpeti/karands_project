@@ -4,17 +4,22 @@ import axios from 'axios'
 
 import '../../components/Dashboard/popupWithCards.css'
 
+import { useNavigate } from "react-router-dom";
+
+
 const PopupWithCards = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [users, setUsers] = useState([])
 
-  const [cardsData, setCardsData] = useState({})
-  // const [users, setUsers] = useState([])
+  const [profileClickedId, setProfileClickedId] = useState('')
 
-  // const [referredUserIds, setReferredUserId] = useState([])
+  const [reffarelCount, setRefferalCount] = useState([])
+
+  const navigate = useNavigate()
 
 //   // Sample card data
   const cards = [
@@ -26,57 +31,97 @@ const PopupWithCards = () => {
     { name: 'ramesh', location: 'Hyderabad', designation: 'software developer', image: 'https://res.cloudinary.com/dymmp1vtz/image/upload/v1702892449/imageProfile_umcjom.png' },
     
   ];
-//'http://localhost:8080/karands/users/refferalCode/?refferalCodeTaken=91MSWko6RL'
 // const refferalCode = '91MSWko6RL'
-// setReferredUserId(res.data.details.RefferalCount)
 
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${localStorage.getItem("id")}`)
         .then(res => 
-          setCardsData(res.data)
           
+          setRefferalCount(res.data.details.RefferalCount)
         )
         .catch(err => console.log(err))
 }, [])
-console.log('cardsData', cardsData)
-
-console.log('Referralcount', cardsData.details)
-// console.log(referredUserIds)
-
-const {details} = cardsData
-console.log(details)
-
-// console.log(users)
+console.log('reffarelCount', reffarelCount)
 
 
+const fetchUsers = async (userIds) => {
+  // Check if userIds is an array with a length greater than 0
+  const promises = (Array.isArray(userIds) && userIds.length > 0)
+    ? userIds.map(async (userid) => {
+        const response = await axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${userid}`);
+        return response.data;
+      })
+    : [];
 
-// const fetchUsers = async (userIds)=> {
-//            // Fetch user details for each userid in the calllogs array
-//           const promises = userIds.map(async (userid) => {
-//             const response = await axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${userid}`);
+  // Wait for all promises to resolve and set the user details in state
+  const userDetails = await Promise.all(promises);
 
-//             return response.data;
+  setUsers(userDetails);
 
-//         });
+  console.log("userDetails", userDetails);
 
-//         // Wait for all promises to resolve and set the user details in state
+};
 
-//         const userDetails = await Promise.all(promises);
+console.log('referred users', users)
 
-//         console.log("userDetails", userDetails)
+// const fetchUsers = async (userIds) => {
+//   if (!Array.isArray(userIds) || userIds.length === 0) {
+//     console.error('Invalid userIds:', userIds);
+//     return;
+//   }
 
-//         setUsers(userDetails);
-// }
+//   const promises = userIds.map(async (userid) => {
+//     const response = await axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${userid}`);
+//     return response.data;
+//   });
+
+//   const userDetails = await Promise.all(promises);
+//   setUsers(userDetails);
+// };
+
 
 
 // useEffect(()=>{
-//   fetchUsers(cardsData.details)
+//   if(cardsData.details && (cardsData.details?.RefferalCount !== undefined)){
+//     fetchUsers(cardsData.details?.RefferalCount)
+//   }
 // }, [])
 
 
+useEffect(()=>{
+  if(reffarelCount.length !== 0){
+    fetchUsers(reffarelCount)
+  }
+}, [])
 
 
 
+
+//when profile is clicked then fetch the details of that particular user details by _id
+//for debugging purpos only(to console and see the details of referred user when clicked)
+useEffect(()=>{
+  if(profileClickedId !== ''){
+    axios.get(`${process.env.REACT_APP_IP_ADDRESS}/karands/users/${profileClickedId}`)
+    .then(res => 
+      console.log(res.data)
+      
+    )
+    .catch(err => console.log(err))
+  }
+}, [])
+
+const handleSuggestionClick = (suggestion) => {
+  setProfileClickedId(suggestion._id)
+  console.log("clicked form handleSuggestionClick");
+
+  //   return
+console.log(suggestion._id)
+console.log(localStorage.getItem("id"))
+  if (suggestion.name) {
+    navigate(`/ViewProfileForReferrals/${suggestion._id}`);
+    //localhost:3000/ViewProfileForReferrals/657ed012e7212ccf78743ac3
+  }
+};
 
 
 return (
@@ -90,16 +135,17 @@ return (
           <Modal.Title>Referred Profiles</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {cards.length >=1 && cards.map((card, index) => (
-            <Card key={index} className="mb-3">
+          {users.length >=1 ? users.map((card, index) => (
+            <Card onClick={(e)=> handleSuggestionClick(card.details)} key={index} className="mb-3">
               <Card.Body>
-              <Card.Text><img className='image-profile' alt="profile" src={card.image} /></Card.Text>
-                <Card.Title>{card.name}</Card.Title>
-                <Card.Text>{card.location}</Card.Text>
-                <Card.Text>{card.designation}</Card.Text>
+              <Card.Text><img className='image-profile' alt="profile" src='https://res.cloudinary.com/dymmp1vtz/image/upload/v1702892449/imageProfile_umcjom.png' /></Card.Text>
+                <Card.Title>{card.details.name}</Card.Title>
+                <Card.Text>{card.details.preferredLocation}</Card.Text>
+                <Card.Text>{card.details.preferredDesignation}</Card.Text>
               </Card.Body>
             </Card>
-          ))}
+          )): <span>No referrels by current/ichp user (or) weit for reload because its takes time to reload the users</span>
+        }
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

@@ -114,6 +114,10 @@ import Assignedtasks from '../MyTask/Assignedtasks';
 import Recruitmentdrivejob from '../company/Recruitmentdrivejob';
 import AssignedNewtask from '../MyTask/AssignedNewtask';
 
+//----------------------------------------------------------------------------------------------
+import ViewProfileForReferrals from '../../components/Dashboard/ViewProfileForReferrals'
+//------------------------------------------------------------------------------------------------
+
 function AllRoutes() {
 
   const payment = 1000;
@@ -140,6 +144,12 @@ function AllRoutes() {
       <Route path='/sidebar' element={<Protect><Sidebar /></Protect>} />
       <Route path='/viewprofile' element={<Protect><Viewprofile /></Protect>} />
       <Route path='/viewprofile/:userId' element={<Protect><Viewprofile /></Protect>} />
+      {/* <Route path='/viewprofile/:userId' element={<Viewprofile />} /> */}
+
+      {/* ViewProfileForReferrals */}
+
+      <Route path='/ViewProfileForReferrals/:userId' element={<ViewProfileForReferrals />} />
+
       <Route path='/editprofile' element={<Protect><Editprofile /></Protect>} />
       <Route path='/upload' element={<Protect><Newdocuments /></Protect>} />
       <Route path='/myaccount' element={<Protect><MyAccount /></Protect>} />

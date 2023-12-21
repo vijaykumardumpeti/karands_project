@@ -92,7 +92,7 @@ useEffect(()=>{
   if(reffarelCount.length !== 0){
     fetchUsers(reffarelCount)
   }
-}, [])
+}, [reffarelCount])
 
 
 
